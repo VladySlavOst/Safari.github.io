@@ -2,6 +2,10 @@
 
 
 @media only screen and (max-width : 2500px) {
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0px;
+    margin-left: 0px;
+}
 	.selecter-item{
 		font-family: 'RobotoRegular';
 		color: #7a7369;
@@ -15,53 +19,53 @@
 	.selecter-item:hover span{
 		padding-left: 10px;
 	}
-.selecter-selected {
-    position: relative;
-    background: #fff;
-    border: 1px solid #ccc;
-    color: #7a7369;
-    font-family: "RobotoLight";
-    cursor: pointer;
-    display: block;
-    font-size: 13px;
-    margin: 0;
-    overflow: hidden;
-    padding: 5px 15px;
-    text-overflow: clip;
-    z-index: 2;
-    border-radius: 3px;
-}
-.side-bar .selecter {
-    position: relative;
-    display: block;
-    margin: 10px 0;
-    z-index: 100;
-    max-width: 90%;
-    box-shadow: 1px 1px 9px 3px #7a7369;
-}
-.selecter-selected:after {
-  height: 19px;
-  width: 21px;
-  position: absolute;
-  top: 0;
-  right: 5px;
-  bottom: 0;
-  background: url(../img/arr.png) no-repeat;
-  content: '';
-  display: block;
-  margin: auto 0;
-  border: none;
-}
-.selecter.cover .selecter-options {
-    border-width: 1px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    top: auto;
-    bottom: 100%;
-}
-.navbar-nav {
-     margin: 0; 
-}
+	.selecter-selected {
+		position: relative;
+		background: #fff;
+		border: 1px solid #ccc;
+		color: #7a7369;
+		font-family: "RobotoLight";
+		cursor: pointer;
+		display: block;
+		font-size: 13px;
+		margin: 0;
+		overflow: hidden;
+		padding: 5px 15px;
+		text-overflow: clip;
+		z-index: 2;
+		border-radius: 3px;
+	}
+	.side-bar .selecter {
+		position: relative;
+		display: block;
+		margin: 10px 0;
+		z-index: 100;
+		max-width: 90%;
+		box-shadow: 1px 1px 9px 3px #7a7369;
+	}
+	.selecter-selected:after {
+		height: 19px;
+		width: 21px;
+		position: absolute;
+		top: 0;
+		right: 5px;
+		bottom: 0;
+		background: url(../img/arr.png) no-repeat;
+		content: '';
+		display: block;
+		margin: auto 0;
+		border: none;
+	}
+	.selecter.cover .selecter-options {
+		border-width: 1px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		top: auto;
+		bottom: 100%;
+	}
+	.navbar-nav {
+		margin: 0; 
+	}
 
 
 }
@@ -71,13 +75,13 @@
 @media only screen and (max-width : 992px) {
 
 	.slider {
-    max-width: 73%;
-}
-.fotoman {
-    margin-top: 0px;
-    z-index: 100;
-    text-align: center;
-}
+		max-width: 73%;
+	}
+	.fotoman {
+		margin-top: 0px;
+		z-index: 100;
+		text-align: center;
+	}
 
 }
 
@@ -111,13 +115,53 @@
 
 
 @media only screen and (max-width : 770px) {
+	/*ТРансформация бургер меню*/
+	.active-block{
+		-webkit-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		transition: .3s;
+	}
+	.active-block span:nth-child(4) {
+		-webkit-transform: rotate(35deg);
+		-ms-transform: rotate(35deg);
+		transform: rotate(35deg);
+		width: 19px;
+	}
+	.active-block span:nth-child(2){
+		-webkit-transform: rotate(-35deg);
+		-ms-transform: rotate(-35deg);
+		transform: rotate(-35deg);
+		width: 19px;
+	}
+	.active-block span:nth-child(3) {
+		width: 35px;
+	}
+	.navbar-default .navbar-toggle .icon-bar{
+		-webkit-transition: -webkit-transform .3s;
+		transition: transform .3s;
+	}
+/*ТРансформация бургер меню*/
+
+
+	.navbar-default .navbar-toggle:focus, 
+	.navbar-default .navbar-toggle:hover {
+		background-color: #41ae2e;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: #fff;
+
+	}
 	.navbar-toggle {
 		position: relative;
 		float: right;
-		padding: 15px 15px;
+		padding: 10px 10px;
 		margin-top: 25px;
 		margin-right: 50px;
-		margin-bottom: 8px;
+		margin-bottom: 20px;
 		background-color: transparent;
 		border: 1px solid transparent;
 		border-radius: 4px;
